@@ -10,8 +10,7 @@ class Room:
 
     def __str__(self):
         return f"""room name: {self.name},
-room description: {self.description} 
-items: {self.items}\n"""
+room description: {self.description} """
 
     # def add_item(self, item):
     #     print(self.items)
