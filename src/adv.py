@@ -53,7 +53,12 @@ systemList = ["q", "1", "2", "3", "4", "5", "i"]
 # game start
 
 
-prLightGray("\nWelcome to the game Dungeon Something.")
+prLightGray("\nWelcome to the game Dungeon Something. \n")
+
+prYellow("enter character name:")
+nameInput = input(">>")
+player.input_name(nameInput)
+
 
 userInput = ''
 while userInput != 'q':
@@ -69,7 +74,7 @@ while userInput != 'q':
                 prLightPurple("To exit: input [q]")  # exit
             if userInput == "2":
                 prLightPurple(
-                    "For movement options: input [3] / For action options: input [4] For inventory: input [i]")  # player options
+                    "For movement options: input [3] / For action options: input [4] For inventory: input [i] / For character stats: input [5]")  # player options
             if userInput == "3":
                 prYellow(
                     "To move North: input [n] / To move East: input [e] / To move South: input [s] / To move West: input [w]")  # movement options
@@ -83,6 +88,9 @@ while userInput != 'q':
                 player.inventory = search_inventory()
                 prGreen(
                     f"you currently have these items in your inventory: {player.inventory}")  # inventory list
+            if userInput == "5":
+                prYellow(
+                    f"character: {player.name}, health: {player.health}, mana: {player.mana}, energy: {player.energy}, inventory : {player.inventory}")
         else:
             prRed("Input invalid")
     # action input
