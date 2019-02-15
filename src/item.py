@@ -16,3 +16,5 @@ class Item:
 
     def on_drop(self):
         return f"you dropped the: {self.name}, you don't need it anyways."
+
+# add subclasses of items
