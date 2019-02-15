@@ -1,7 +1,7 @@
 from room import Room
 from item import Item
 from player import Player
-from monster import Monster
+# from monster import Monster
 
 import random
 
@@ -132,13 +132,13 @@ for item in item_list:
 
 # create monsters, then randomize room later, add abilities
 
-gremlin1 = Monster("gremlin", 20, 2, 14, "")
-chupacabra1 = Monster("chupacabra", 22, 4, 20, "")
-banshee1 = Monster("banshee", 30, 15, 22, "")
-zombie1 = Monster("zombie", 10, 5, 10, "")
-orc1 = Monster("orc", 37, 3, 40, "")
-golem1 = Monster("golem", 50, 10, 10, "")
-cyclops1 = Monster("cyclops", 55, 20, 10, "")
-succubs1 = Monster("succubus", 20, 50, 17, "")
-vampire1 = Monster("vampire", 60, 40, 35, "")
-Basilisk = Monster("basilisk", 120, 50, 120, "")
+# gremlin1 = Monster("gremlin", 20, 2, 14, "")
+# chupacabra1 = Monster("chupacabra", 22, 4, 20, "")
+# banshee1 = Monster("banshee", 30, 15, 22, "")
+# zombie1 = Monster("zombie", 10, 5, 10, "")
+# orc1 = Monster("orc", 37, 3, 40, "")
+# golem1 = Monster("golem", 50, 10, 10, "")
+# cyclops1 = Monster("cyclops", 55, 20, 10, "")
+# succubs1 = Monster("succubus", 20, 50, 17, "")
+# vampire1 = Monster("vampire", 60, 40, 35, "")
+# Basilisk = Monster("basilisk", 120, 50, 120, "")
