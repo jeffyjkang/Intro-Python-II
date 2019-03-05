@@ -31,6 +31,8 @@ def action_parser(action, item_name):
                     prGreen(item.on_take())
                     player.inventory.append(item_found)
                     player.room.items.remove(item_found)
+                else:
+                    prRed("Cant get that item")
         elif action == "drop":
             for item in player.inventory:
                 if item.name == item_name:
@@ -38,6 +40,8 @@ def action_parser(action, item_name):
                     prGreen(item.on_drop())
                     player.room.items.append(item_found)
                     player.inventory.remove(item_found)
+                else:
+                    prRed("Cant drop that item")
     else:
         print("invalid input")
 # list items in room
