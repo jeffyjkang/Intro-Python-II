@@ -7,12 +7,24 @@ from data import room as room, item as item, player as player
 # input parser
 actionList = ["get", "drop"]
 
+#
 
-def action_parser(action, item):
+
+def action_parser(action, item_name):
     if action in actionList:
         if action == "get":
+            for item in player.room.items:
+                if item.name == item_name:
+                    item_found = item
+                    player.inventory.append(item_found)
+                    player.room.items.remove(item_found)
             print("got item")
         elif action == "drop":
+            for item in player.inventory:
+                if item.name == item_name:
+                    item_found = item
+                    player.room.items.append(item_found)
+                    player.inventory.remove(item_found)
             print("dropped item")
     else:
         print("invalid input")
@@ -82,60 +94,11 @@ while userInput != 'q':
         print(player.room)
         print(list_items(player.room))
     userInput = input(">> ")
-
     # movement input
     if(len(userInput) > 0):
-        movement(userInput)
-        # if userInput == 'n':
-        #     if hasattr(player.room, 'n_to'):
-        #         player.room = player.room.n_to
-        #         print(player.room)
-        #         print(list_items(player.room))
-        #     else:
-        #         print("Dead End, can't go North")
-        # elif userInput == 'e':
-        #     if hasattr(player.room, "e_to"):
-        #         player.room = player.room.e_to
-        #         print(player.room)
-        #         print(list_items(player.room))
-        #     else:
-        #         print("Dead End, can't go East")
-        # elif userInput == 's':
-        #     if hasattr(player.room, 's_to'):
-        #         player.room = player.room.s_to
-        #         print(player.room)
-        #         print(list_items(player.room))
-        #     else:
-        #         print("Dead End, can't go South")
-        # elif userInput == 'w':
-        #     if hasattr(player.room, 'w_to'):
-        #         player.room = player.room.w_to
-        #         print(player.room)
-        #         print(list_items(player.room))
-        #     else:
-        #         print("Dead End, can't go West")
+        if userInput in movementList:
+            movement(userInput)
     # action input
     if(len(userInput) > 1):
         userInput = userInput.split(" ")
         action_parser(userInput[0], userInput[1])
-        # if userInput = 'g':
-
-        # If the user enters a cardinal direction, attempt to move to the room there.
-        # Print an error message if the movement isn't allowed.
-        #
-        # If the user enters "q", quit the game.
-
-        # for r in room:
-        #     print(room[r])
-
-        # for i in item:
-        #     print(item[i])
-
-        # print(f'{room["outside"].name}')
-        ##
-        # print(player)
-        # print(player.room.name)
-        # print(player.room.description)
-
-        # print(room)
-        # print(room["outside"].print_room)
