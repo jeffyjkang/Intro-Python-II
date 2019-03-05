@@ -12,3 +12,5 @@ class Player:
 
     def input_name(self, name):
         self.name = name
+
+# add methods
