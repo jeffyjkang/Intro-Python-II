@@ -26,15 +26,15 @@ earlier adventurers. The only exit is to the south.""", ""),
 # Declare all items
 
 item = {
-    'sword': Item("sword", "pretty cool sword"),
+    'sword': Item("sword", "a pretty cool sword"),
 
-    "shield": Item("shield", "pretty sturdy shield"),
+    "shield": Item("shield", "a pretty sturdy shield"),
 
     "boots": Item("boots", "a pair of pretty fashionable boots"),
 
     "armor": Item("armor", "a pretty weird looking suit"),
 
-    "helmet": Item("helmet", "pretty regal looking headpiece")
+    "helmet": Item("helmet", "a pretty regal looking headpiece")
 }
 
 # declare player
